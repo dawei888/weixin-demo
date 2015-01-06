@@ -4,9 +4,9 @@ set -x
 
 mkdir -p logs
 
-go build barrage.go
+go build echo.go
 
-ps -ef | grep barrage  | grep -v grep | awk '{system("kill -9 "$2)}'
-nohup ./barrage > logs/barrage.log 2>&1 &
+ps -ef | grep echo  | grep -v grep | awk '{system("kill -9 "$2)}'
+nohup ./echo > logs/echo.log 2>&1 &
 
-tail -f logs/barrage.log
+tail -f logs/echo.log
